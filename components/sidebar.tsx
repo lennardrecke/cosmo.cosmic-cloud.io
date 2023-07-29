@@ -66,12 +66,13 @@ const routes = [
   },
 ];
 
-interface SidebarProps {
+const Sidebar = ({
+  apiLimitCount = 0,
+  isPro = false,
+}: {
   apiLimitCount: number;
   isPro: boolean;
-}
-
-const Sidebar = ({ apiLimitCount = 0, isPro = false }: SidebarProps) => {
+}) => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
