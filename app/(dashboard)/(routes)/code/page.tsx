@@ -65,7 +65,7 @@ const CodePage = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Heading
         title="Code Generation"
         description="Generate code using descriptive test."
@@ -120,7 +120,7 @@ const CodePage = () => {
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
                   message.role === "user"
-                    ? "bg-white border border-black/10"
+                    ? "border border-black/10 bg-white dark:bg-gray-900"
                     : "bg-muted"
                 )}
               >

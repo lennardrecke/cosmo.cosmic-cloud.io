@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { Providers } from "@/components/providers";
 import Sidebar from "@/components/sidebar";
 import { getApiLimitCount } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
@@ -12,8 +13,10 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         <Sidebar apiLimitCount={apiLimitCount} isPro={isPro} />
       </div>
       <main className="md:pl-72">
-        <Navbar />
-        {children}
+        <Providers attribute="class">
+          <Navbar />
+          {children}
+        </Providers>
       </main>
     </div>
   );
