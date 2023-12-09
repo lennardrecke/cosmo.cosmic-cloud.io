@@ -123,7 +123,7 @@ const ConversationPage = () => {
                 )}
               >
                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">{message.content}</p>
+                <pre className="text-sm">{message.content}</pre>
               </div>
             ))}
           </div>
